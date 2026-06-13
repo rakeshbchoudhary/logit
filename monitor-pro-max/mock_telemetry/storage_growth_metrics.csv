@@ -1,0 +1,16 @@
+snapshot_date,table_name,layer,size_gb,num_files,num_rows,dbus_consumed,delta_version
+2026-06-09,bronze.sales_raw,bronze,210.4,1820,42500000,18.5,118
+2026-06-09,silver.sales_clean,silver,96.2,640,18900000,42.7,77
+2026-06-09,gold.sales_daily_agg,gold,4.1,32,420000,0.0,40
+2026-06-10,bronze.sales_raw,bronze,214.9,1855,43880000,19.8,119
+2026-06-10,silver.sales_clean,silver,96.2,640,18900000,71.3,77
+2026-06-10,gold.sales_daily_agg,gold,4.1,32,420000,0.0,40
+2026-06-11,bronze.sales_raw,bronze,219.1,1888,45200000,18.9,120
+2026-06-11,silver.sales_clean,silver,101.5,672,19840000,0.0,78
+2026-06-11,gold.sales_daily_agg,gold,4.1,32,420000,55.1,40
+2026-06-12,bronze.sales_raw,bronze,223.6,1921,46390000,17.6,121
+2026-06-12,silver.sales_clean,silver,106.8,705,20745000,39.4,79
+2026-06-12,gold.sales_daily_agg,gold,4.4,34,434200,33.2,41
+2026-06-13,bronze.sales_raw,bronze,229.0,1960,48010000,0.0,122
+2026-06-13,silver.sales_clean,silver,106.8,705,20745000,80.6,79
+2026-06-13,gold.sales_daily_agg,gold,4.4,34,434200,0.0,41

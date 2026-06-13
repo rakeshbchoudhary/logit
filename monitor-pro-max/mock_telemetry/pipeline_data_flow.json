@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.0",
+  "source": "spark_sql_metrics + delta_lake_history",
+  "note": "Row counts are sourced from structured Spark SQLMetrics and Delta operationMetrics. See ADR-002.",
+  "flows": [
+    {
+      "run_id": "RUN-2026-06-09-02",
+      "pipeline_name": "pl_transform_sales_silver",
+      "status": "Succeeded",
+      "stages": [
+        {
+          "stage_id": 0,
+          "operation": "READ",
+          "source_table": "bronze.sales_raw",
+          "target_table": null,
+          "rows_read": 1250000,
+          "rows_filtered": 0,
+          "rows_transformed": 0,
+          "rows_written": 0,
+          "duration_seconds": 240,
+          "spilled_bytes": 0
+        },
+        {
+          "stage_id": 1,
+          "operation": "FILTER",
+          "source_table": "bronze.sales_raw",
+          "target_table": null,
+          "rows_read": 1250000,
+          "rows_filtered": 310000,
+          "rows_transformed": 0,
+          "rows_written": 0,
+          "duration_seconds": 95,
+          "spilled_bytes": 0
+        },
+        {
+          "stage_id": 2,
+          "operation": "TRANSFORM",
+          "source_table": "bronze.sales_raw",
+          "target_table": null,
+          "rows_read": 940000,
+          "rows_filtered": 0,
+          "rows_transformed": 940000,
+          "rows_written": 0,
+          "duration_seconds": 610,
+          "spilled_bytes": 134217728
+        },
+        {
+          "stage_id": 3,
+          "operation": "WRITE",
+          "source_table": "bronze.sales_raw",
+          "target_table": "silver.sales_clean",
+          "rows_read": 0,
+          "rows_filtered": 0,
+          "rows_transformed": 0,
+          "rows_written": 940000,
+          "duration_seconds": 635,
+          "spilled_bytes": 0
+        }
+      ]
+    },
+    {
+      "run_id": "RUN-2026-06-10-02",
+      "pipeline_name": "pl_transform_sales_silver",
+      "status": "Failed",
+      "stages": [
+        {
+          "stage_id": 0,
+          "operation": "READ",
+          "source_table": "bronze.sales_raw",
+          "target_table": null,
+          "rows_read": 1380000,
+          "rows_filtered": 0,
+          "rows_transformed": 0,
+          "rows_written": 0,
+          "duration_seconds": 305,
+          "spilled_bytes": 0
+        },
+        {
+          "stage_id": 1,
+          "operation": "FILTER",
+          "source_table": "bronze.sales_raw",
+          "target_table": null,
+          "rows_read": 1380000,
+          "rows_filtered": 340000,
+          "rows_transformed": 0,
+          "rows_written": 0,
+          "duration_seconds": 110,
+          "spilled_bytes": 0
+        },
+        {
+          "stage_id": 2,
+          "operation": "TRANSFORM",
+          "source_table": "bronze.sales_raw",
+          "target_table": null,
+          "rows_read": 1040000,
+          "rows_filtered": 0,
+          "rows_transformed": 0,
+          "rows_written": 0,
+          "duration_seconds": 2100,
+          "spilled_bytes": 5368709120
+        }
+      ]
+    },
+    {
+      "run_id": "RUN-2026-06-11-02",
+      "pipeline_name": "pl_aggregate_sales_gold",
+      "status": "Canceled",
+      "stages": [
+        {
+          "stage_id": 0,
+          "operation": "READ",
+          "source_table": "silver.sales_clean",
+          "target_table": null,
+          "rows_read": 940000,
+          "rows_filtered": 0,
+          "rows_transformed": 0,
+          "rows_written": 0,
+          "duration_seconds": 180,
+          "spilled_bytes": 0
+        },
+        {
+          "stage_id": 1,
+          "operation": "TRANSFORM",
+          "source_table": "silver.sales_clean",
+          "target_table": null,
+          "rows_read": 940000,
+          "rows_filtered": 0,
+          "rows_transformed": 12000,
+          "rows_written": 0,
+          "duration_seconds": 1850,
+          "spilled_bytes": 2147483648
+        }
+      ]
+    },
+    {
+      "run_id": "RUN-2026-06-12-02",
+      "pipeline_name": "pl_transform_sales_silver",
+      "status": "Succeeded",
+      "stages": [
+        {
+          "stage_id": 0,
+          "operation": "READ",
+          "source_table": "bronze.sales_raw",
+          "target_table": null,
+          "rows_read": 1190000,
+          "rows_filtered": 0,
+          "rows_transformed": 0,
+          "rows_written": 0,
+          "duration_seconds": 220,
+          "spilled_bytes": 0
+        },
+        {
+          "stage_id": 1,
+          "operation": "FILTER",
+          "source_table": "bronze.sales_raw",
+          "target_table": null,
+          "rows_read": 1190000,
+          "rows_filtered": 285000,
+          "rows_transformed": 0,
+          "rows_written": 0,
+          "duration_seconds": 88,
+          "spilled_bytes": 0
+        },
+        {
+          "stage_id": 2,
+          "operation": "TRANSFORM",
+          "source_table": "bronze.sales_raw",
+          "target_table": null,
+          "rows_read": 905000,
+          "rows_filtered": 0,
+          "rows_transformed": 905000,
+          "rows_written": 0,
+          "duration_seconds": 560,
+          "spilled_bytes": 0
+        },
+        {
+          "stage_id": 3,
+          "operation": "WRITE",
+          "source_table": "bronze.sales_raw",
+          "target_table": "silver.sales_clean",
+          "rows_read": 0,
+          "rows_filtered": 0,
+          "rows_transformed": 0,
+          "rows_written": 905000,
+          "duration_seconds": 574,
+          "spilled_bytes": 0
+        }
+      ]
+    },
+    {
+      "run_id": "RUN-2026-06-12-03",
+      "pipeline_name": "pl_aggregate_sales_gold",
+      "status": "Succeeded",
+      "stages": [
+        {
+          "stage_id": 0,
+          "operation": "READ",
+          "source_table": "silver.sales_clean",
+          "target_table": null,
+          "rows_read": 905000,
+          "rows_filtered": 0,
+          "rows_transformed": 0,
+          "rows_written": 0,
+          "duration_seconds": 150,
+          "spilled_bytes": 0
+        },
+        {
+          "stage_id": 1,
+          "operation": "TRANSFORM",
+          "source_table": "silver.sales_clean",
+          "target_table": null,
+          "rows_read": 905000,
+          "rows_filtered": 0,
+          "rows_transformed": 14200,
+          "rows_written": 0,
+          "duration_seconds": 720,
+          "spilled_bytes": 0
+        },
+        {
+          "stage_id": 2,
+          "operation": "WRITE",
+          "source_table": "silver.sales_clean",
+          "target_table": "gold.sales_daily_agg",
+          "rows_read": 0,
+          "rows_filtered": 0,
+          "rows_transformed": 0,
+          "rows_written": 14200,
+          "duration_seconds": 420,
+          "spilled_bytes": 0
+        }
+      ]
+    },
+    {
+      "run_id": "RUN-2026-06-13-01",
+      "pipeline_name": "pl_transform_sales_silver",
+      "status": "Failed",
+      "stages": [
+        {
+          "stage_id": 0,
+          "operation": "READ",
+          "source_table": "bronze.sales_raw",
+          "target_table": null,
+          "rows_read": 1620000,
+          "rows_filtered": 0,
+          "rows_transformed": 0,
+          "rows_written": 0,
+          "duration_seconds": 360,
+          "spilled_bytes": 0
+        },
+        {
+          "stage_id": 1,
+          "operation": "FILTER",
+          "source_table": "bronze.sales_raw",
+          "target_table": null,
+          "rows_read": 1620000,
+          "rows_filtered": 405000,
+          "rows_transformed": 0,
+          "rows_written": 0,
+          "duration_seconds": 130,
+          "spilled_bytes": 0
+        },
+        {
+          "stage_id": 2,
+          "operation": "TRANSFORM",
+          "source_table": "bronze.sales_raw",
+          "target_table": null,
+          "rows_read": 1215000,
+          "rows_filtered": 0,
+          "rows_transformed": 0,
+          "rows_written": 0,
+          "duration_seconds": 2400,
+          "spilled_bytes": 8589934592
+        }
+      ]
+    }
+  ]
+}

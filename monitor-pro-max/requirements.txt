@@ -1,0 +1,15 @@
+# ADF-ADB Monitor Pro Max - Python dependencies
+streamlit>=1.36.0
+pandas>=2.2.0
+plotly>=5.22.0
+python-dotenv>=1.0.1
+
+# Agent framework (LangChain v1 - uses create_agent)
+langchain>=1.0.0
+langchain-core>=1.0.0
+langchain-openai>=0.2.0
+langchain-anthropic>=0.3.0
+
+# Testing
+pytest>=8.2.0
+pytest-cov>=5.0.0

@@ -1,0 +1,127 @@
+{
+  "factory": "adf-prod-eastus-01",
+  "generated_at": "2026-06-13T08:00:00Z",
+  "schema_version": "1.0",
+  "runs": [
+    {
+      "run_id": "RUN-2026-06-09-01",
+      "pipeline_name": "pl_ingest_sales_bronze",
+      "trigger_type": "ScheduleTrigger",
+      "status": "Succeeded",
+      "start_time": "2026-06-09T01:00:00Z",
+      "end_time": "2026-06-09T01:12:40Z",
+      "duration_seconds": 760,
+      "dbus_consumed": 18.5,
+      "cluster_id": "0609-010000-abcd1234",
+      "error_message": null
+    },
+    {
+      "run_id": "RUN-2026-06-09-02",
+      "pipeline_name": "pl_transform_sales_silver",
+      "trigger_type": "TumblingWindowTrigger",
+      "status": "Succeeded",
+      "start_time": "2026-06-09T01:15:00Z",
+      "end_time": "2026-06-09T01:41:20Z",
+      "duration_seconds": 1580,
+      "dbus_consumed": 42.7,
+      "cluster_id": "0609-011500-efgh5678",
+      "error_message": null
+    },
+    {
+      "run_id": "RUN-2026-06-10-01",
+      "pipeline_name": "pl_ingest_sales_bronze",
+      "trigger_type": "ScheduleTrigger",
+      "status": "Succeeded",
+      "start_time": "2026-06-10T01:00:00Z",
+      "end_time": "2026-06-10T01:14:05Z",
+      "duration_seconds": 845,
+      "dbus_consumed": 19.8,
+      "cluster_id": "0610-010000-abcd1234",
+      "error_message": null
+    },
+    {
+      "run_id": "RUN-2026-06-10-02",
+      "pipeline_name": "pl_transform_sales_silver",
+      "trigger_type": "TumblingWindowTrigger",
+      "status": "Failed",
+      "start_time": "2026-06-10T01:15:00Z",
+      "end_time": "2026-06-10T01:58:12Z",
+      "duration_seconds": 2592,
+      "dbus_consumed": 71.3,
+      "cluster_id": "0610-011500-efgh5678",
+      "error_message": "Job aborted due to stage failure: Task 14 in stage 9.0 failed 4 times; org.apache.spark.SparkException."
+    },
+    {
+      "run_id": "RUN-2026-06-11-01",
+      "pipeline_name": "pl_ingest_sales_bronze",
+      "trigger_type": "ScheduleTrigger",
+      "status": "Succeeded",
+      "start_time": "2026-06-11T01:00:00Z",
+      "end_time": "2026-06-11T01:13:10Z",
+      "duration_seconds": 790,
+      "dbus_consumed": 18.9,
+      "cluster_id": "0611-010000-abcd1234",
+      "error_message": null
+    },
+    {
+      "run_id": "RUN-2026-06-11-02",
+      "pipeline_name": "pl_aggregate_sales_gold",
+      "trigger_type": "ScheduleTrigger",
+      "status": "Canceled",
+      "start_time": "2026-06-11T02:00:00Z",
+      "end_time": "2026-06-11T02:34:48Z",
+      "duration_seconds": 2088,
+      "dbus_consumed": 55.1,
+      "cluster_id": "0611-020000-ijkl9012",
+      "error_message": "Run canceled by user 'dataops-oncall' after SLA breach (>30m)."
+    },
+    {
+      "run_id": "RUN-2026-06-12-01",
+      "pipeline_name": "pl_ingest_sales_bronze",
+      "trigger_type": "ScheduleTrigger",
+      "status": "Succeeded",
+      "start_time": "2026-06-12T01:00:00Z",
+      "end_time": "2026-06-12T01:11:55Z",
+      "duration_seconds": 715,
+      "dbus_consumed": 17.6,
+      "cluster_id": "0612-010000-abcd1234",
+      "error_message": null
+    },
+    {
+      "run_id": "RUN-2026-06-12-02",
+      "pipeline_name": "pl_transform_sales_silver",
+      "trigger_type": "TumblingWindowTrigger",
+      "status": "Succeeded",
+      "start_time": "2026-06-12T01:15:00Z",
+      "end_time": "2026-06-12T01:39:02Z",
+      "duration_seconds": 1442,
+      "dbus_consumed": 39.4,
+      "cluster_id": "0612-011500-efgh5678",
+      "error_message": null
+    },
+    {
+      "run_id": "RUN-2026-06-12-03",
+      "pipeline_name": "pl_aggregate_sales_gold",
+      "trigger_type": "ScheduleTrigger",
+      "status": "Succeeded",
+      "start_time": "2026-06-12T02:00:00Z",
+      "end_time": "2026-06-12T02:21:30Z",
+      "duration_seconds": 1290,
+      "dbus_consumed": 33.2,
+      "cluster_id": "0612-020000-ijkl9012",
+      "error_message": null
+    },
+    {
+      "run_id": "RUN-2026-06-13-01",
+      "pipeline_name": "pl_transform_sales_silver",
+      "trigger_type": "TumblingWindowTrigger",
+      "status": "Failed",
+      "start_time": "2026-06-13T01:15:00Z",
+      "end_time": "2026-06-13T02:03:44Z",
+      "duration_seconds": 2924,
+      "dbus_consumed": 80.6,
+      "cluster_id": "0613-011500-efgh5678",
+      "error_message": "Job aborted due to stage failure: ExecutorLostFailure (executor 7 exited caused by OutOfMemoryError)."
+    }
+  ]
+}

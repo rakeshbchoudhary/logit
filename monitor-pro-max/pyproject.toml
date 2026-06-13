@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adf-adb-monitor-pro-max"
+version = "0.1.0"
+description = "Offline post-execution analytics for Azure Data Factory + Databricks pipelines."
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --cov=src --cov-report=term-missing --cov-fail-under=60"
+pythonpath = ["."]
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["src/app.py"]
